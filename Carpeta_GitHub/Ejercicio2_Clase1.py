@@ -1,7 +1,0 @@
-n1=input("Ingrse su primer nombre: ")
-n2=input("Ingrse su segundo nombre: ")
-a1=input("Ingrese su primer apellido: ")
-a2=input("Ingrese su segundo apellido: ")
-nombre=n1.lower()
-apellido=a1.lower()
-print("Su correo de Key Institute es: ", nombre + "." + apellido + "@keyinstitute.edu.sv")
