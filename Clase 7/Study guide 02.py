@@ -122,5 +122,20 @@ for j in range(len(desviaciones)):
         continue
 
 # 5. Identifica los 3 hogares con menor consumo total durante la semana. Muestra sus índices y valores.
+pos={
+    0: "primer",
+    1: "segundo",
+    2: "tercer"
+}
+resp=[]
+consumoth=consumo_total_hogar.copy()
+consumoth.sort()
+print(consumoth)
+for i in range(3):
+    print(f"El {pos[i]} hogar con menor consumo de energía durante la semana es: {np.where(consumo_total_hogar==consumoth[i])[0][0]} con {consumoth[i]}")
 
 # 6. Si el hogar 3 aumenta su consumo en un 10% cada día, ¿cuál sería su nuevo consumo total semanal?
+suma_h3=0
+for i in consumo[2]:
+    suma_h3=suma_h3+consumo[2,0]*(1+(i/10))
+print(f"Si el hogar 3 aumenta su consumo un 10% cada día con respecto al primer día, entonces su nuevo consumo semanal es: {suma_h3}")
